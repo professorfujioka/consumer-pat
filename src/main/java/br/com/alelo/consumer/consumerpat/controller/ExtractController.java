@@ -28,7 +28,7 @@ class ExtractController {
 
     /* Deve listar todos os Extratos | Inclui a listagem paginada também */
     @GetMapping("/list")
-    public ResponseEntity<Page<Extract>> listAllConsumers(@RequestParam("page") int page,
+    public ResponseEntity<Page<Extract>> listAll(@RequestParam("page") int page,
                                                            @RequestParam("size") int size) {
         Pageable pageable = PageRequest.of(page, size);
         return ResponseEntity.ok(service.getAllExtractsByPage(pageable));

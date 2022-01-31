@@ -10,6 +10,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -58,6 +60,14 @@ class EstablishmentMapperTest {
         Establishment establishment = mapper.dtoToEntity(dto);
         assertEquals(ENTITY_DTO_NAME, dto.getEstablishmentName());
         assertEquals(CardType.FOOD, dto.getCardTypeAccepted());
+    }
+
+    @Test
+    void should_listDtoToEntity () {
+        List<EstablishmentDTO> listaDto = new ArrayList<>();
+        listaDto.add(dto);
+        List<Establishment> listaEntity = mapper.listDTOToEntity(listaDto);
+        assertEquals(1, listaEntity.size());
     }
 
 }

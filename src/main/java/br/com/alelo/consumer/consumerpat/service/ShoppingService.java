@@ -146,7 +146,7 @@ public class ShoppingService {
                 throw new BusinessException("Tipo de Benefício não aceito ou não cadastrado para o estabelecimento");
             }
         } else {
-            throw new BusinessException("Estabelecimento aceita esta cartão");
+            throw new BusinessException("Estabelecimento não aceita esta cartão");
         }
 
         return establishment;
