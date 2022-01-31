@@ -21,7 +21,9 @@
 
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.organization>professorfujioka</sonar.organization>
+        <sonar.exclusions>**/*Config.java,**/domain/*,**/util/*,**/*DTO.java,**/entity/**,**/resources/**,**/repository/**,**/converter/**,**/enums/**,**/constants/**,**/*Exception.java,**/*ExceptionHandler.java,/**/ConsumerTestApplication.java</sonar.exclusions>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+
         <sonar.language>Java</sonar.language>
 
     </properties>
